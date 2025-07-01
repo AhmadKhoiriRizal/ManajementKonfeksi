@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminJenisKainActivity">
+
+    <!-- Tombol Pencarian -->
+    <LinearLayout
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_button">
+
+        <!-- EditText untuk pencarian -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Cari Jenis Kain"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Icon Search Button -->
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="Search"
+            android:layout_gravity="center_vertical" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView untuk daftar merek -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginBottom="72dp">
+
+        <LinearLayout
+            android:id="@+id/merekContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
+    </ScrollView>
+
+    <!-- Tombol tambah -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddJenisKain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Tambah Jenis Kain"
+        app:srcCompat="@android:drawable/ic_input_add" />
+</RelativeLayout>

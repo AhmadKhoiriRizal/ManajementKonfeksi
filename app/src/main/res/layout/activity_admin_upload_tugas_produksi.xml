@@ -1,0 +1,173 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.upload.UploadTugasProduksi">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Spinner: Nama User -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Nama User"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/NamaUser"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp" />
+
+        <!-- Spinner: Merek -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Merek"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerMerek"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp" />
+
+        <!-- Spinner: Model Produk -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Model Produk"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerModelProduk"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"  />
+
+        <!-- Spinner: Jenis Kain -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Jenis Kain"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerJenisKain"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"  />
+
+        <!-- EditText: Stok di Penjahit -->
+        <EditText
+            android:id="@+id/inputStokPenjahit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Tugas"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Tanggal Masuk -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Masuk"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/inputTanggalMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pilih tanggal masuk"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableEnd="@drawable/ic_calender"
+            android:drawablePadding="8dp" />
+
+        <!-- Tanggal Selesai -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Selesai"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/inputTanggalSelesai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pilih tanggal selesai"
+            android:focusable="false"
+            android:clickable="true"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableEnd="@drawable/ic_calender"
+            android:drawablePadding="8dp" />
+
+        <!-- Spinner: Status Selesai/Dikerjakan/Belum -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Status Produksi"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinnerStatusProduksi"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/spinner_background"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"  />
+
+        <!-- Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/kembali"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Kembali"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnUploadData"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Upload Data"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

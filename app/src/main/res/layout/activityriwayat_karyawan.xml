@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".karyawan.RiwayatActivity">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tugas Diselesaikan"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="12dp" />
+            <!-- Daftar tugas selesai -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tugas_selesai"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="16dp"
+                tools:listitem="@layout/item_tugas_selesai" />
+
+            <!-- Daftar statis -->
+            <include layout="@layout/item_tugas_selesai" />
+            <include layout="@layout/item_tugas_selesai" />
+            <include layout="@layout/item_tugas_selesai" />
+            <include layout="@layout/item_tugas_selesai" />
+            <include layout="@layout/item_tugas_selesai" />
+            <include layout="@layout/item_tugas_selesai" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/black"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemPaddingBottom="6dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:menu="@menu/bottom_menu" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>

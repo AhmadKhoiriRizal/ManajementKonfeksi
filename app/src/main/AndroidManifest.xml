@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- PERMISSIONS HARUS DI SINI -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".NightModeOFF"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Karyawan Activities -->
+        <activity android:name=".karyawan.MenuActivity" />
+        <activity android:name=".karyawan.RiwayatActivity" />
+        <activity android:name=".karyawan.SettingsActivity" />
+        <activity android:name=".karyawan.ProfileActivity" />
+
+<!--         Admin Activities -->
+        <!-- Menu Utama -->
+        <activity android:name=".MenuActivity" />
+
+        <!-- Aktivitas Admin -->
+        <activity android:name=".admin.AdminBerandaActivity" />
+<!--    Stok Kain    -->
+        <activity android:name=".admin.AdminStokKainActivity" />
+        <activity android:name=".admin.upload.UploadStokKain" />
+<!--    Jenis Kain    -->
+        <activity android:name=".admin.AdminJenisKainActivity" />
+        <activity android:name=".admin.upload.UploadJenisKain" />
+<!--    Merek    -->
+        <activity android:name=".admin.AdminMerekActivity" />
+        <activity android:name=".admin.upload.UploadMerek" />
+<!--    Model    -->
+        <activity android:name=".admin.AdminModelProdukActivity" />
+        <activity android:name=".admin.upload.UploadModel" />
+<!--    Penjahit    -->
+        <activity android:name=".admin.AdminPenjahitActivity" />
+        <activity android:name=".admin.upload.EditPenjahitActivity" />
+
+        <activity android:name=".admin.AdminTugasProduksiActivity" />
+        <activity android:name=".admin.AdminLaporanProduksiActivity" />
+        <activity android:name=".admin.AdminPengaturanActivity" />
+
+<!--        <activity android:name=".SearchActivity" />-->
+<!--        <activity android:name=".SettingsActivity" />-->
+<!--        <activity android:name=".ProfileActivity" />-->
+
+    </application>
+
+</manifest>

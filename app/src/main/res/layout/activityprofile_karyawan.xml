@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".karyawan.ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Profil"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Foto Profil + Tombol Edit -->
+            <FrameLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_profile_placeholder"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background"
+                    android:clipToOutline="true" />
+
+                <ImageView
+                    android:id="@+id/btn_edit_photo"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/circle_white_background"
+                    android:padding="6dp"
+                    android:elevation="4dp" />
+            </FrameLayout>
+
+            <!-- Nama Lengkap -->
+            <EditText
+                android:id="@+id/edit_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Lengkap"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/user_circle_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Nomor HP -->
+            <EditText
+                android:id="@+id/edit_nomor_hp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nomor HP"
+                android:inputType="phone"
+                android:drawableStart="@drawable/phone_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/email_1_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Alamat -->
+            <EditText
+                android:id="@+id/edit_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alamat"
+                android:inputType="textMultiLine"
+                android:minLines="2"
+                android:maxLines="4"
+                android:drawableStart="@drawable/location_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Kata Sandi Lama -->
+            <EditText
+                android:id="@+id/edit_password_lama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kata Sandi Lama"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/lock_password_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Kata Sandi Baru -->
+            <EditText
+                android:id="@+id/edit_password_baru"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Kata Sandi Baru"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/lock_password_svgrepo_com"
+                android:drawablePadding="12dp"
+                android:padding="12dp"
+                android:background="@drawable/edittext_background"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tombol Simpan -->
+            <Button
+                android:id="@+id/btn_simpan_perubahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan Perubahan"
+                android:backgroundTint="@color/black"
+                android:textColor="@android:color/white"
+                android:padding="12dp"
+                android:elevation="4dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:elevation="2dp"
+        app:labelVisibilityMode="labeled"
+        app:itemTextColor="@color/black"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemPaddingBottom="6dp"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:menu="@menu/bottom_menu" />
+
+</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
